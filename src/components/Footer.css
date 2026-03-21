@@ -1,0 +1,59 @@
+.footer {
+  background-color: var(--color-bg-alt);
+  padding-top: 4rem;
+  border-top: 1px solid rgba(0,0,0,0.05);
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 4rem;
+  margin-bottom: 3rem;
+}
+
+.footer-brand p {
+  color: var(--color-text-muted);
+  margin-top: 1rem;
+}
+
+.footer-brand .motto {
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-top: 0.5rem;
+}
+
+.footer-links {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.footer-links h4 {
+  margin-bottom: 1rem;
+  color: var(--color-text-main);
+  font-size: 1.1rem;
+}
+
+.footer-links ul li {
+  color: var(--color-text-muted);
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 1.5rem 0;
+  border-top: 1px solid rgba(0,0,0,0.05);
+  background: white;
+}
+
+.footer-bottom p {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+  }
+}
