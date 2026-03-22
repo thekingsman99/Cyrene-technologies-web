@@ -22,14 +22,11 @@ const Home = () => {
       const yOffset = i - (gridSize / 2 - 0.5);
       const distance = Math.sqrt(xOffset * xOffset + yOffset * yOffset);
       
-      // Anchor tiles roughly corresponding to Africa (center grid blocks)
-      const isAfrica = (i >= 2 && i <= 3) && (j >= 2 && j <= 3);
-      
-      // Calculate a staggered delay so they break one after the other
+      // Calculate a staggered delay so they break one after the other sequentially
       const sequenceIndex = i * gridSize + j;
       const delay = sequenceIndex * 15; // 15px scroll delay per piece
       
-      const explodeFactor = isAfrica ? 0 : Math.max(0, (scrollPos - delay) * 0.4); // Speed of dispersal
+      const explodeFactor = Math.max(0, (scrollPos - delay) * 0.4); // Speed of dispersal
       
       const transform = `
         translate3d(${xOffset * explodeFactor * 1.5}px, ${yOffset * explodeFactor * 1.5}px, ${distance * explodeFactor * 2}px)
@@ -45,8 +42,8 @@ const Home = () => {
             backgroundPosition: `${(j / (gridSize - 1)) * 100}% ${(i / (gridSize - 1)) * 100}%`,
             backgroundSize: `${gridSize * 100}% ${gridSize * 100}%`,
             transform: transform,
-            opacity: isAfrica ? 1 : Math.max(0, 1 - ((scrollPos - delay) / 600)),
-            zIndex: isAfrica ? 10 : 1 // Keep Africa over shattering pieces
+            opacity: Math.max(0, 1 - ((scrollPos - delay) / 600)),
+            zIndex: 1
           }}
         ></div>
       );
