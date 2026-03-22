@@ -347,3 +347,14 @@
   }
 }
 
+
+@media (max-width: 768px) {
+  .hero-content { padding-top: 2rem; }
+  .services-grid, .why-us-grid, .vm-grid { grid-template-columns: 1fr; }
+  .timeline::before { left: 20px; }
+  .timeline-item { width: 100%; padding-left: 50px; padding-right: 0; }
+  .timeline-item:nth-child(even) { left: 0; padding-left: 50px; }
+  .timeline-item:nth-child(even) .timeline-dot { left: -24px; right: auto; }
+  .timeline-dot { left: -24px; }
+  .timeline-content { padding: 1.5rem; }
+}

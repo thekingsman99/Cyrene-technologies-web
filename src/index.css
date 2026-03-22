@@ -123,8 +123,19 @@ img {
 }
 
 .btn-outline:hover {
-  background: var(--color-primary);
-  color: var(--color-text-light);
+  background: var(--color-primary-dark);
+  color: white;
+  border-color: var(--color-primary-dark);
+}
+
+/* Base Responsive */
+@media (max-width: 768px) {
+  html {
+    font-size: 14px; /* Scale down typography globally for mobile */
+  }
+  .container {
+    padding: 0 1.5rem; /* Tighter padding */
+  }
 }
 
 /* Section Spacing */

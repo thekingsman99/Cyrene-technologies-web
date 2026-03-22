@@ -154,3 +154,12 @@
     padding: 2rem;
   }
 }
+
+@media (max-width: 768px) {
+  .ai-grid {
+    grid-template-columns: 1fr;
+  }
+  .ai-hero-content {
+    padding-top: 3rem;
+  }
+}
